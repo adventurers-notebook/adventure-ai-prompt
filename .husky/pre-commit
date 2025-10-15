@@ -1,0 +1,6 @@
+pretty-quick --staged && \
+ng lint && \
+qlty check --all && \
+qlty smells --all && \
+qlty metrics --all && \
+npm run test

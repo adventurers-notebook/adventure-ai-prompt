@@ -1,0 +1,45 @@
+mat-sidenav {
+  width: 20em;
+}
+
+mat-sidenav-container {
+  height: calc(100% - 64px);
+}
+
+mat-sidenav mat-toolbar {
+  margin-top: -64px;
+}
+
+mat-tree-node:focus {
+  outline: none;
+}
+
+mat-tree-node {
+  cursor: pointer;
+}
+
+mat-toolbar.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+mat-sidenav.left mat-toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+mat-sidenav.right mat-toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+mat-card-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: roww;
+  justify-content: flex-end;
+  gap: 1em;
+}
