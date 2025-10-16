@@ -1,0 +1,58 @@
+// Importa le funzioni principali di Angular Material (necessario per far funzionare il theming)
+@use '@angular/material' as mat;
+
+// Includi i componenti principali e il theming (obbligatorio)
+@include mat.core();
+
+// Definisci le palette di colori che vuoi usare (esempio con le palette predefinite)
+$primary-palette: mat.define-palette(mat.$indigo-palette);
+$accent-palette: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// Crea il tema dell'applicazione. Puoi scegliere tra un tema chiaro (define-light-theme) o scuro (define-dark-theme)
+$my-app-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $primary-palette,
+      accent: $accent-palette,
+    ),
+    // Assicurati di includere la configurazione della tipografia qui!
+    typography: mat.define-typography-config(),
+  )
+);
+
+// Applica il tema a tutti i componenti dell'applicazione
+@include mat.all-component-themes($my-app-theme);
+
+// --- SOLUZIONE AL TUO PROBLEMA ---
+// Applica gli stili tipografici di base (h1, h2, p, ecc.) al body
+// Questo è il passaggio che probabilmente ti manca.
+html,
+body {
+  @include mat.core-theme($my-app-theme);
+  @include mat.typography-hierarchy(
+    $my-app-theme
+  ); // Applica la gerarchia tipografica
+  height: 100%;
+}
+
+// Altri stili globali
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+// global overrides
+html,
+body {
+  height: 100% !important;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+mat-card,
+mat-card-title {
+  margin: 0.5em;
+  padding: 0.5em;
+}

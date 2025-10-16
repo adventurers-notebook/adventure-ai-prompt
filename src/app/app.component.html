@@ -6,282 +6,59 @@
       Start by choosing one or more of these AI generated adventure types, and
       settings:
     </div>
-    <h1>Adventure types</h1>
+    <div class="mat-headline">Adventure types</div>
     <mat-accordion>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Mysterious & Atmospheric</mat-panel-title>
-        </mat-expansion-panel-header>
-        <dl>
-          <dt>Description:</dt>
-          <dd>
-            Focuses on building suspense, hinting at hidden secrets, and
-            emphasizing the unknown. Emphasizes a sense of foreboding and
-            intrigue.
-          </dd>
-          <dt>Keywords:</dt>
-          <dd>Suspenseful, eerie, enigmatic, unsettling, subtle.</dd>
-          <dt>Example:</dt>
-          <dd>
-            A haunted forest, ancient ruin shrouded in fog, a cryptic prophecy.
-          </dd>
-          <dt>Suitable for:</dt>
-          <dd>Level 3-5, players who enjoy puzzles and uncovering secrets.</dd>
-        </dl>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Lighthearted & Humorous</mat-panel-title>
-        </mat-expansion-panel-header>
-        <dl>
-          <dt>Description:</dt>
-          <dd>
-            Emphasizes comedic situations, witty dialogue, and silly characters.
-            Aims for enjoyment and laughs.
-          </dd>
-          <dt>Keywords:</dt>
-          <dd>Funny, whimsical, goofy, silly, absurd.</dd>
-          <dt>Example:</dt>
-          <dd>
-            A quest to retrieve stolen pies, rescuing a grumpy gnome from a
-            mischievous sprite, dealing with inept monsters.
-          </dd>
-          <dt>Suitable for:</dt>
-          <dd>
-            Players who enjoy roleplaying comedic situations and lighthearted
-            challenges. Works well at lower levels (1-3).
-          </dd>
-        </dl>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Grim & Serious</mat-panel-title>
-        </mat-expansion-panel-header>
-        <dl>
-          <dt>Description:</dt>
-          <dd>
-            Focuses on darker themes, moral dilemmas, and significant
-            consequences. Can be unsettling and challenging.
-          </dd>
-          <dt>Keywords:</dt>
-          <dd>Dark, serious, dramatic, weighty, impactful.</dd>
-          <dt>Example:</dt>
-          <dd>
-            A quest to defeat a tyrannical sorcerer, investigating a corrupted
-            temple, dealing with loss and betrayal.
-          </dd>
-          <dt>Suitable for:</dt>
-          <dd>
-            Players who enjoy challenging encounters and complex narratives.
-            Works well for higher-level play (5+).
-          </dd>
-        </dl>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Epic & Heroic</mat-panel-title>
-        </mat-expansion-panel-header>
-        <dl>
-          <dt>Description:</dt>
-          <dd>
-            Focuses on grand quests, heroic deeds, and overcoming seemingly
-            insurmountable obstacles. Emphasizes teamwork and sacrifice.
-          </dd>
-          <dt>Keywords:</dt>
-          <dd>Heroic, grand, challenging, courageous, momentous.</dd>
-          <dt>Example:</dt>
-          <dd>
-            A quest to retrieve a powerful artifact, defeat a monstrous horde,
-            save a kingdom from destruction.
-          </dd>
-          <dt>Suitable for:</dt>
-          <dd>
-            Players who enjoy a sense of accomplishment and teamwork. Works well
-            for higher-level play.
-          </dd>
-        </dl>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Whimsical & Fantastical</mat-panel-title>
-        </mat-expansion-panel-header>
-        <dl>
-          <dt>Description:</dt>
-          <dd>
-            Embraces a sense of wonder, magic, and imaginative creatures. Often
-            playful and light, even when facing challenges.
-          </dd>
-          <dt>Keywords:</dt>
-          <dd>Magical, fantastical, playful, enchanting, charming.</dd>
-          <dt>Example:</dt>
-          <dd>
-            Exploring a land made of candy, befriending mischievous pixies,
-            navigating a world governed by dreams.
-          </dd>
-          <dt>Suitable for:</dt>
-          <dd>
-            Players who enjoy imaginative worlds and whimsical adventures. Works
-            well for any level.
-          </dd>
-        </dl>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Mystery & Intrigue</mat-panel-title>
-        </mat-expansion-panel-header>
-        <dl>
-          <dt>Description:</dt>
-          <dd>
-            Focuses on uncovering a secret, solving a puzzle, or unraveling a
-            conspiracy. Emphasis on investigation and deduction.
-          </dd>
-          <dt>Keywords:</dt>
-          <dd>Secret, puzzle, conspiracy, clues, deduction.</dd>
-          <dt>Example:</dt>
-          <dd>
-            Finding a hidden treasure, solving a murder, uncovering a plot by
-            villains.
-          </dd>
-          <dt>Suitable for:</dt>
-          <dd>
-            Players that enjoy puzzles and detective work. Works well at any
-            level, but particularly good for higher levels.
-          </dd>
-        </dl>
-      </mat-expansion-panel>
+      @for (adv of adventureTypes; track adv.title) {
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>{{ adv.title }}</mat-panel-title>
+          </mat-expansion-panel-header>
+          <dl>
+            <dt>Description:</dt>
+            <dd>{{ adv.description }}</dd>
+            <dt>Keywords:</dt>
+            <dd>{{ adv.keywords }}</dd>
+            <dt>Example:</dt>
+            <dd>{{ adv.example }}</dd>
+            <dt>Suitable for:</dt>
+            <dd>{{ adv.suitable }}</dd>
+          </dl>
+        </mat-expansion-panel>
+      }
     </mat-accordion>
-    <h1>Settings</h1>
-    <h2>Classic fantasy settings</h2>
+    <div class="mat-headline">Settings</div>
+    <div class="mat-subtitle">Classic fantasy settings</div>
     <mat-accordion>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Medieval Kingdom</mat-panel-title>
-        </mat-expansion-panel-header>
-        <div>
-          A typical medieval setting with castles, villages, knights, and
-          political intrigue. Great for a traditional adventure feel.
-          <i>(Think Lord of the Rings)</i>
-        </div>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Ancient Ruins</mat-panel-title>
-        </mat-expansion-panel-header>
-        <div>
-          Explore the crumbling remains of a long-lost civilization. Could be
-          riddled with traps, puzzles, and ancient magic.
-          <i>(Think Indiana Jones meets D&D)</i>
-        </div>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Forest Realm</mat-panel-title>
-        </mat-expansion-panel-header>
-        <div>
-          A vast and ancient forest, teeming with wildlife, hidden groves, and
-          potentially dangerous creatures. Perfect for a quest focused on
-          wilderness survival or a mystical journey. <i>(Think The Witcher)</i>
-        </div>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Coastal City</mat-panel-title>
-        </mat-expansion-panel-header>
-        <div>
-          A thriving port city with bustling markets, seafaring adventures, and
-          hidden smuggling operations. <i>(Think Pirates of the Caribbean)</i>
-        </div>
-      </mat-expansion-panel>
+      @for (setting of classicSettings; track setting.title) {
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>{{ setting.title }}</mat-panel-title>
+          </mat-expansion-panel-header>
+          <div>{{ setting.description }}</div>
+        </mat-expansion-panel>
+      }
     </mat-accordion>
-    <h2>More unique settings</h2>
+    <div class="mat-headline">More unique settings</div>
     <mat-accordion>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Underdark</mat-panel-title>
-        </mat-expansion-panel-header>
-        <div>
-          A subterranean world of monstrous creatures, dark magic, and
-          treacherous landscapes. A great setting for a challenging dungeon
-          crawl. <i>(Think Dungeons & Dragons 4th Edition Underdark)</i>
-        </div>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Floating Islands</mat-panel-title>
-        </mat-expansion-panel-header>
-        <div>
-          A world where islands float amidst the clouds, connected by magical
-          bridges or precarious pathways. Offers unique vertical exploration and
-          visual possibilities.
-        </div>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Desert Oasis</mat-panel-title>
-        </mat-expansion-panel-header>
-        <div>
-          A harsh and arid landscape with hidden oases, ancient ruins, and
-          nomadic tribes. Perfect for a desert-themed adventure.
-          <i>(Think Lawrence of Arabia)</i>
-        </div>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Frozen Wasteland</mat-panel-title>
-        </mat-expansion-panel-header>
-        <div>
-          A bleak and unforgiving landscape of ice, snow, and glaciers. Great
-          for a survival-focused quest. <i>(Think The Frozen Wilds)</i>
-        </div>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Steampunk City</mat-panel-title>
-        </mat-expansion-panel-header>
-        <div>
-          A Victorian-inspired city fueled by clockwork mechanisms and
-          steam-powered technology. <i>(Think Dishonored)</i>
-        </div>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Dreamscape</mat-panel-title>
-        </mat-expansion-panel-header>
-        <div>
-          A surreal and ever-changing realm of dreams and nightmares. A great
-          setting for a whimsical adventure with a touch of horror.
-        </div>
-      </mat-expansion-panel>
+      @for (setting of uniqueSettings; track setting.title) {
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>{{ setting.title }}</mat-panel-title>
+          </mat-expansion-panel-header>
+          <div>{{ setting.description }}</div>
+        </mat-expansion-panel>
+      }
     </mat-accordion>
-    <h2>Settings with a twist</h2>
+    <div class="mat-headline">Settings with a twist</div>
     <mat-accordion>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Underwater City</mat-panel-title>
-        </mat-expansion-panel-header>
-        <div>
-          A civilization thriving beneath the waves, with its own unique
-          culture, architecture, and dangers.
-        </div>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Post-Apocalyptic</mat-panel-title>
-        </mat-expansion-panel-header>
-        <div>
-          A world ravaged by a cataclysmic event, with survivors struggling to
-          rebuild in a desolate landscape.
-        </div>
-      </mat-expansion-panel>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>Celestial Realm</mat-panel-title>
-        </mat-expansion-panel-header>
-        <div>
-          A heavenly plane accessible only through divine intervention. Filled
-          with gods, angels, and celestial beings.
-        </div>
-      </mat-expansion-panel>
+      @for (setting of twistSettings; track setting.title) {
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>{{ setting.title }}</mat-panel-title>
+          </mat-expansion-panel-header>
+          <div>{{ setting.description }}</div>
+        </mat-expansion-panel>
+      }
     </mat-accordion>
   </mat-card-content>
 </mat-card>
