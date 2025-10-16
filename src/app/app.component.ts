@@ -134,11 +134,6 @@ export class AppComponent {
         'A subterranean world of monstrous creatures, dark magic, and treacherous landscapes. A great setting for a challenging dungeon crawl. (Think Dungeons & Dragons 4th Edition Underdark)',
     },
     {
-      title: 'Underdark',
-      description:
-        'A subterranean world of monstrous creatures, dark magic, and treacherous landscapes. A great setting for a challenging dungeon crawl. (Think Dungeons & Dragons 4th Edition Underdark)',
-    },
-    {
       title: 'Floating Islands',
       description:
         'A world where islands float amidtst the clouds, connected by magical briudges or precarious pathways. Offers unique vertical exploration and visual possibilities. (Think Avatar: The Last Airbender)',

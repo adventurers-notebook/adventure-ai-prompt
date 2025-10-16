@@ -1,12 +1,12 @@
 <mat-card>
-  <mat-card-title>Welcome, game masters!</mat-card-title>
+  <mat-card-title><h1>Welcome, game masters!</h1></mat-card-title>
   <mat-card-content>
     <div>Hi, I'm here to help you live memorable experiences!</div>
     <div>
       Start by choosing one or more of these AI generated adventure types, and
       settings:
     </div>
-    <div class="mat-headline">Adventure types</div>
+    <h2>Adventure types</h2>
     <mat-accordion>
       @for (adv of adventureTypes; track adv.title) {
         <mat-expansion-panel>
@@ -26,8 +26,8 @@
         </mat-expansion-panel>
       }
     </mat-accordion>
-    <div class="mat-headline">Settings</div>
-    <div class="mat-subtitle">Classic fantasy settings</div>
+    <h2>Settings</h2>
+    <h3>Classic fantasy settings</h3>
     <mat-accordion>
       @for (setting of classicSettings; track setting.title) {
         <mat-expansion-panel>
@@ -38,7 +38,7 @@
         </mat-expansion-panel>
       }
     </mat-accordion>
-    <div class="mat-headline">More unique settings</div>
+    <h3>More unique settings</h3>
     <mat-accordion>
       @for (setting of uniqueSettings; track setting.title) {
         <mat-expansion-panel>
@@ -49,7 +49,7 @@
         </mat-expansion-panel>
       }
     </mat-accordion>
-    <div class="mat-headline">Settings with a twist</div>
+    <h3>Settings with a twist</h3>
     <mat-accordion>
       @for (setting of twistSettings; track setting.title) {
         <mat-expansion-panel>
