@@ -3,9 +3,20 @@
   <mat-card-content>
     <div>Hi, I'm here to help you live memorable experiences!</div>
     <div>
-      Start by choosing one or more of these AI generated adventure types, and
+      Start by choosing a system then one or more of these adventure types, and
       settings:
     </div>
+    <h2>Game system</h2>
+    <mat-form-field>
+      <mat-label>Pick one!</mat-label>
+      <mat-select [(value)]="selectedSystem">
+        @for (system of systems; track system) {
+          <mat-option [value]="system">
+            {{ system.name }}
+          </mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
     <h2>Adventure types</h2>
     <mat-accordion>
       @for (adv of adventureTypes; track adv.title) {
@@ -90,7 +101,7 @@
     </mat-accordion>
     <h3>Settings with a twist</h3>
     <mat-accordion>
-      @for (setting of twistSettings; track setting.title) {
+      @for (setting of twistedSettings; track setting.title) {
         <mat-expansion-panel>
           <mat-expansion-panel-header
             [class.selected-item]="isSettingSelected(setting.title)"

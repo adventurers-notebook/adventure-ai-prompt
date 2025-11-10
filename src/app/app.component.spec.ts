@@ -1,7 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { AppComponent } from './app.component'
-
-import { expect } from '@jest/globals'
+import { provideHttpClient } from '@angular/common/http'
+import {
+  HttpTestingController,
+  provideHttpClientTesting,
+} from '@angular/common/http/testing'
 
 import { HarnessLoader } from '@angular/cdk/testing'
 import { MatCardHarness } from '@angular/material/card/testing'
@@ -10,12 +13,14 @@ import { Clipboard } from '@angular/cdk/clipboard'
 import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card'
 import { MatSnackBarModule } from '@angular/material/snack-bar'
+import { expect } from '@jest/globals'
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>
   let component: AppComponent
   let loader: HarnessLoader
   let clipboard: Clipboard
+  let httpTestingController: HttpTestingController
 
   beforeEach(async () => {
     TestBed.configureTestingModule({
@@ -25,12 +30,29 @@ describe('AppComponent', () => {
         MatCardModule,
         MatSnackBarModule,
       ],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     })
+
     fixture = TestBed.createComponent(AppComponent)
-    fixture.detectChanges()
     component = fixture.componentInstance
     loader = TestbedHarnessEnvironment.loader(fixture)
     clipboard = TestBed.inject(Clipboard)
+    httpTestingController = TestBed.inject(HttpTestingController)
+
+    fixture.detectChanges() // This triggers ngOnInit
+
+    const req = httpTestingController.expectOne('assets/data.json')
+    req.flush({
+      data: {
+        systems: [{ name: 'Dungeons & Dragons', description: 'A fantasy RPG' }],
+        adventureTypes: [
+          { title: 'Mysterious & Atmospheric', description: '...' },
+        ],
+        classicSettings: [{ title: 'Medieval Kingdom', description: '...' }],
+        uniqueSettings: [],
+        twistedSettings: [],
+      },
+    })
   })
 
   it('should create the app', () => {
@@ -76,9 +98,19 @@ describe('AppComponent', () => {
     expect(component.isSettingSelected('Medieval Kingdom')).toBe(false)
   })
 
+  it('should select a system', async () => {
+    expect(component.selectedSystem).toBeUndefined()
+    const dnd = component.systems.filter(
+      (sys) => sys.name === 'Dungeons & Dragons'
+    )
+    component.selectedSystem = dnd[0]
+    expect(component.selectedSystem?.name).toBe('Dungeons & Dragons')
+  })
+
   it('should generate with wrong adventure type and setting selection', async () => {
     const copySpy = jest.spyOn(clipboard, 'copy')
 
+    component.selectedSystem = component.systems[0]
     component.selectSetting('Fantasy')
 
     component.generateAdventure()
@@ -91,6 +123,8 @@ describe('AppComponent', () => {
 
   it('should generate prompt with correct selection', async () => {
     const copySpy = jest.spyOn(clipboard, 'copy')
+
+    component.selectedSystem = component.systems[0]
 
     component.selectSetting('Medieval Kingdom')
     const myst = component.adventureTypes.filter(

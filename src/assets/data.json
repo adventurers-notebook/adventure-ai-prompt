@@ -1,0 +1,148 @@
+{
+  "data": {
+    "systems": [
+      {
+        "name": "Dungeons & Dragons (D&D)",
+        "description": "The iconic fantasy TTRPG that popularized the genre, where players create heroes to explore dungeons, fight monsters, and embark on epic quests in a world filled with magic."
+      },
+      {
+        "name": "Call of Cthulhu",
+        "description": "A horror TTRPG inspired by H.P. Lovecraft's works, where players investigate eldritch mysteries and confront cosmic horrors, often leading to tragic ends and loss of sanity (Sanity/d100 system)."
+      },
+      {
+        "name": "Pathfinder",
+        "description": "A fantasy TTRPG with a ruleset originally based on D&D 3.5 edition, featuring deep customization options, an extensive library of supplements, and its own rich fantasy setting."
+      },
+      {
+        "name": "Blades in the Dark",
+        "description": "A game set in the haunted, industrial city of Doskvol. Players take on the roles of scoundrels and criminals, working together to complete daring 'scores' (heists) with flashback mechanics."
+      },
+      {
+        "name": "Star Wars Roleplaying Game (Fantasy Flight/Edge)",
+        "description": "A series of TTRPGs set in the Star Wars universe, using a unique narrative dice system where results indicate success/failure as well as additional effects (e.g., threat or advantage)."
+      },
+      {
+        "name": "Vampire: The Masquerade",
+        "description": "A modern gothic TTRPG where players are vampires (Kindred) navigating the political schemes and dark secrets of their hidden society (The Masquerade) in a World of Darkness."
+      },
+      {
+        "name": "Traveller",
+        "description": "A classic science fiction TTRPG known for its life-path character creation system and focus on space exploration, trade, combat, and surviving in a vast, sprawling galaxy."
+      },
+      {
+        "name": "Monster of the Week",
+        "description": "A Powered by the Apocalypse (PbtA) game inspired by TV shows like 'Buffy the Vampire Slayer' and 'Supernatural.' Players are monster hunters investigating and facing supernatural threats."
+      },
+      {
+        "name": "GURPS (Generic Universal RolePlaying System)",
+        "description": "A highly flexible, 'generic' system designed to be adapted to any setting or genre (fantasy, sci-fi, horror, etc.), known for its detailed character creation and 3d6 roll-under core mechanic."
+      },
+      {
+        "name": "Mörk Borg",
+        "description": "A rules-light, dark, and brutally simple fantasy RPG known for its unique, visually striking graphic design and focus on desperate adventurers in a dying world."
+      }
+    ],
+    "adventureTypes": [
+      {
+        "title": "Mysterious & Atmospheric",
+        "description": "Focuses on building suspense, hinting at hidden secrets, and emphasizing the unknown. Emphasizes a sense of foreboding and intrigue.",
+        "keywords": "Suspenseful, eerie, enigmatic, unsettling, subtle.",
+        "example": "A haunted forest, ancient ruin shrouded in fog, a cryptic prophecy.",
+        "suitable": "Level 3-5, players who enjoy puzzles and uncovering secrets."
+      },
+      {
+        "title": "Lighthearted & Humorous",
+        "description": "Emphasizes comedic situations, witty dialogue, and silly characters. Aims for enjoyment and laughs.",
+        "keywords": "Funny, whimsical, goofy, silly, absurd.",
+        "example": "A quest to retrieve stolen pies, rescuing a grumpy gnome from a mischievous sprite, dealing with inept monsters.",
+        "suitable": "Players who enjoy roleplaying comedic situations and lighthearted challenges. Works well at lower levels (1-3)."
+      },
+      {
+        "title": "Grim & Serious",
+        "description": "Focuses on dark themes, moral dilemmas, and significant consequences. Can be unsettling and challenging.",
+        "keywords": "Dark, serious, dramatic, weighty, impactful.",
+        "example": "A quest to defeat a tyrannical sorcerer, investigating a corrupeted temple, dealing with loss and betrayal.",
+        "suitable": "Players who enjoy challenging encounters and complex narratives. Works well with high-level play (5+)."
+      },
+      {
+        "title": "Epic & Heroic",
+        "description": "Focuses on grand quests, heroic deeds, and overcoming seemingly insurmountable obstacles. Emphasizes teamwork and sacrifice.",
+        "keywords": "Heroic, grand, challenging, courageous, momentous.",
+        "example": "A quest to retrieve a powerful artifact, defeat a monstrous horde, save a kingdom from destruction.",
+        "suitable": "Players who enjoy a sense of accomplishment and teamwork. Works well with higher-level play."
+      },
+      {
+        "title": "Whimsical & Fantastical",
+        "description": "Embraces a sense of wonder, magic, and imaginative creatures. Often playful and light, event when facing challenges.",
+        "keywords": "Magical, fantastical, playful, enchanting, charming.",
+        "example": "Exploring a land made of candy, befriending mischievous pixes, navigationg a world dominated by dreams.",
+        "suitable": "Players who enjoy imaginative words and whimsical adventures. Works well for every level"
+      },
+      {
+        "title": "Mystery & intrigue",
+        "description": "Focuses on uncovering a secret, solving a puzzle, or unraveling a conspiracy. Emphasizes investigation and deduction.",
+        "keywords": "Secret, puzzle, conspiracy, clues, deduction.",
+        "example": "Finding a hidden treasure, solving a murder, uncovering a plot by villains.",
+        "suitable": "Players that enjoy puzzles and detective work. Works well at any level but particularly good for higher levels."
+      }
+    ],
+    "classicSettings": [
+      {
+        "title": "Medieval Kingdom",
+        "description": "A typical medieval setting with castles, villages, knights, and political intrigue. Great for a traditional adventure feel. (Think Lord of the Rings)"
+      },
+      {
+        "title": "Ancient Ruins",
+        "description": "Explore the crumbling remains of a long-lost civilization. Could be riddled with traps, puzzles, and ancient magic. (Think Indiana Jones meets D&D)"
+      },
+      {
+        "title": "Forest Realm",
+        "description": "A vast and ancient forest, teeming with wildlife, hidden groves, and potentially dangerous creatures. Perfect for a quest focused on wilderness survival or a mystical journey. (Think The Witcher)."
+      },
+      {
+        "title": "Coastal City",
+        "description": "A thriving port city with bustling markets, seafaring adventures, and hidden smuggling operations. (Think Pirates of the Caribbean)"
+      }
+    ],
+    "uniqueSettings": [
+      {
+        "title": "Underdark",
+        "description": "A subterranean world of monstrous creatures, dark magic, and treacherous landscapes. A great setting for a challenging dungeon crawl. (Think Dungeons & Dragons 4th Edition Underdark)"
+      },
+      {
+        "title": "Floating Islands",
+        "description": "A world where islands float amidtst the clouds, connected by magical briudges or precarious pathways. Offers unique vertical exploration and visual possibilities. (Think Avatar: The Last Airbender)"
+      },
+      {
+        "title": "Desert Oasis",
+        "description": "A harsh desert environment with hidden oases, ancient ruins, and nomadic tribes. Perfect for a desert themed adventure. (Think Lawrence of Arabia)"
+      },
+      {
+        "title": "Frozen Wasteland",
+        "description": "A bleak and unforgiving landscape of ice, snow, and glaciers. Great for a survival-focused quest. (Think The Frozen Wilds)'"
+      },
+      {
+        "title": "Steampunk City",
+        "description": "A Victorial-inspired city fueled by clockwork mechanisms and steam-owered technology. Offers a unique blend of fantasy and industrial elements. (Think Dishonored)"
+      },
+      {
+        "title": "Dreamscape",
+        "description": "A surreal and ever-changing realm of dreams and nightmares. A great setting for whimsical adventures with a touch of horror. (Think Alice in Wonderland)"
+      }
+    ],
+    "twistedSettings": [
+      {
+        "title": "Underwater City",
+        "description": "A civilization thriving beneath the waves, with its own unique culture, architecture, and dangers."
+      },
+      {
+        "title": "Post-Apocalyptic",
+        "description": "A world ravaged by a cataclysmic event, with survivors struggling to rebuild in a desolate landscape."
+      },
+      {
+        "title": "Celestial Realm",
+        "description": "A heavenly plance accessible only through divine intervention. Filled with gods, angels, and other celestial beings."
+      }
+    ]
+  }
+}
